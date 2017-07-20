@@ -21,18 +21,50 @@
   </p>
   <div class="Section0" style="layout-grid:15.6000pt;">
     <p class="MsoNormal" align="center" style="text-align:center;">
-      <span style="font-family:Calibri;font-size:14.0000pt;">Projects:</span>
-      <br>
+      <span style="font-family:Calibri;font-size:14.0000pt;">
+        Projects:
+      </span>
+    </p>
+    <p class="MsoNormal" align="center" style="text-align:center;">
       <br>
       <a href="https://github.com/ChillMagic/ICM">
         <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">ICM</span></a>
       <br>
-      <span style="font-family:Calibri;">The Interpreter of The Chill Programming Language</span></p>
-    <p class="MsoNormal" align="center" style="text-align:center;">
+      <span style="font-family:Calibri;">
+        The Interpreter of The Chill Programming Language
+      </span>
+      <br>
       <span style="font-family:Consolas;">
         <br>(let a "Hello ") (let b "World!")
         <br>(print (+ a b))
-        <br>; Output : "Hello World!"</span></p>
+        <br>
+        <br>; Output : Hello World!
+      </span>
+    </p>
+    <p class="MsoNormal" align="center" style="text-align:center;">
+      <br>
+      <a href="https://github.com/ChillMagic/Chill-Documentation/blob/master/Reference/zh_CN/CMS%E6%A0%87%E5%87%86/README.md">
+        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">CMS</span></a>
+      <br>
+      <span style="font-family:Calibri;">
+        The Chill-Magic High Level Assembler
+      </span>
+      <br>
+      <span style="font-family:Consolas;">
+        <br>.datas:
+        <br>    .string #1 "Hello "
+        <br>    .string #2 "World!"
+        <br>
+        <br>main:
+        <br>    mvd %1, #1
+        <br>    mvd %2, #2
+        <br>    call %res, Core#String#+, %1 %2
+        <br>    call %0, Core#print, %1
+        <br>    ret
+        <br>
+        <br>; Output : Hello World!
+      </span>
+    </p>
   </div>
 
 </html>
