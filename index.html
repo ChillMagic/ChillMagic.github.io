@@ -11,11 +11,6 @@
     <span style="font-family:Calibri;font-size:14.0000pt;">You&nbsp;Can&nbsp;Login:</span>
     <br>
     <br>
-    <!--
-    <a href="http://chill.zueki.com/blog/">
-      <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">WordPress</span></a>
-    <br>
-    -->
     <a href="https://github.com/ChillMagic">
       <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">GitHub</span></a>
   </p>
@@ -64,6 +59,36 @@
         <br>    ret
         <br>
         <br>; Output : Hello World!
+      </span>
+    </p>
+    <p class="MsoNormal" align="center" style="text-align:center;">
+      <br>
+      <a href="https://github.com/ChillMagic/JitFFI">
+        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">JitFFI</span></a>
+      <br>
+      <span style="font-family:Calibri;">
+        JIT compiler for Foreign-Function Interface
+      </span>
+      <br>
+      <span style="font-family:Consolas;">
+        <br>int function(int a, float b);
+        <br>ArgTypeList typelist = { &amp;atu_int, &amp;atu_float };
+        <br>
+        <br>int i = 1, f = 2.0;
+        <br>ArgDataList dl = { &amp;i, &amp;f };
+        <br>ArgDataListPartial dlp1 = { &amp;i, nullptr };
+        <br>ArgDataListPartial dlp2 = { nullptr, &amp;f };
+        <br>
+        <br>auto f1 = Compile(&amp;function, typelist);
+        <br>auto f2 = Compile(&amp;function, typelist, dl);
+        <br>auto f3 = Compile(&amp;function, typelist, dlp1);
+        <br>
+        <br>int r;
+        <br>
+        <br>f1(&amp;r, dl);
+        <br>f2(&amp;r);
+        <br>f3(&amp;r, dlp2);
+        <br>
       </span>
     </p>
   </div>
