@@ -22,7 +22,7 @@
     </p>
     <p class="MsoNormal" align="center" style="text-align:center;">
       <br>
-      <a href="https://github.com/ChillMagic/ICM">
+      <a href="https://github.com/Chill-Language/ICM">
         <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">ICM</span></a>
       <br>
       <span style="font-family:Calibri;">
@@ -38,23 +38,30 @@
     </p>
     <p class="MsoNormal" align="center" style="text-align:center;">
       <br>
-      <a href="https://github.com/ChillMagic/Chill-Documentation/blob/master/Reference/zh_CN/CMS%E6%A0%87%E5%87%86/README.md">
+      <a href="https://github.com/CVM-Projects/CMS-Documentation">
         <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">CMS</span></a>
       <br>
       <span style="font-family:Calibri;">
         The Chill-Magic High Level Assembler
       </span>
       <br>
+      <a href="https://github.com/CVM-Projects/CVM">
+        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">CVM</span></a>
+      <br>
+      <span style="font-family:Calibri;">
+        The First and Experimental Virtual Machine for CMS Language 
+      </span>
+      <br>
       <span style="font-family:Consolas;">
-        <br>.datas:
+        <br>.datas
         <br>    .string #1 "Hello "
         <br>    .string #2 "World!"
         <br>
-        <br>main:
-        <br>    .mode static
-        <br>    mvd %1, #1
-        <br>    mvd %2, #2
-        <br>    call %res, Core#String#+, %1 %2
+        <br>.func main
+        <br>    .stvarb 2, Core#String
+        <br>    load %1, #1
+        <br>    load %2, #2
+        <br>    call %1, Core#String#+, %1 %2
         <br>    call %0, Core#print, %1
         <br>    ret
         <br>
@@ -63,7 +70,7 @@
     </p>
     <p class="MsoNormal" align="center" style="text-align:center;">
       <br>
-      <a href="https://github.com/ChillMagic/JitFFI">
+      <a href="https://github.com/CVM-Projects/JitFFI">
         <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">JitFFI</span></a>
       <br>
       <span style="font-family:Calibri;">
