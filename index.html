@@ -1,103 +1,96 @@
-<html>
-  
-  <head>
-    <title>Chill Magic's Personal WebSite</title>
-    <link rel="icon" href="https://chillmagic.github.io/index.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="index.ico">
-    <link rel="Bookmark" href="index.ico"></head>
-  <h1 align="center" style="text-align:center;">
-    <span style="font-family:Calibri;font-size:22.0000pt;">Welcome&nbsp;to&nbsp;Chill&nbsp;Magic's&nbsp;Personal&nbsp;Web&nbsp;Site</span></h1>
-  <p class="MsoNormal" align="center" style="text-align:center;">
-    <span style="font-family:Calibri;font-size:14.0000pt;">You&nbsp;Can&nbsp;Login:</span>
-    <br>
-    <br>
-    <a href="https://github.com/ChillMagic">
-      <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">GitHub</span></a>
-  </p>
-  <div class="Section0" style="layout-grid:15.6000pt;">
-    <p class="MsoNormal" align="center" style="text-align:center;">
-      <span style="font-family:Calibri;font-size:14.0000pt;">
-        Projects:
-      </span>
-    </p>
-    <p class="MsoNormal" align="center" style="text-align:center;">
-      <br>
-      <a href="https://github.com/Chill-Language/ICM">
-        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">ICM</span></a>
-      <br>
-      <span style="font-family:Calibri;">
-        The Interpreter of The Chill Programming Language
-      </span>
-      <br>
-      <span style="font-family:Consolas;">
-        <br>(let a "Hello ") (let b "World!")
-        <br>(print (+ a b))
-        <br>
-        <br>; Output : Hello World!
-      </span>
-    </p>
-    <p class="MsoNormal" align="center" style="text-align:center;">
-      <br>
-      <a href="https://github.com/CVM-Projects/CMS-Documentation">
-        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">CMS</span></a>
-      <br>
-      <span style="font-family:Calibri;">
-        The Chill-Magic High Level Assembler
-      </span>
-      <br>
-      <a href="https://github.com/CVM-Projects/CVM">
-        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">CVM</span></a>
-      <br>
-      <span style="font-family:Calibri;">
-        The First and Experimental Virtual Machine for CMS Language 
-      </span>
-      <br>
-      <span style="font-family:Consolas;">
-        <br>.datas
-        <br>    .string #1 "Hello "
-        <br>    .string #2 "World!"
-        <br>
-        <br>.func main
-        <br>    .stvarb 2, Core#String
-        <br>    load %1, #1
-        <br>    load %2, #2
-        <br>    call %1, Core#String#+, %1 %2
-        <br>    call %0, Core#print, %1
-        <br>    ret
-        <br>
-        <br>; Output : Hello World!
-      </span>
-    </p>
-    <p class="MsoNormal" align="center" style="text-align:center;">
-      <br>
-      <a href="https://github.com/CVM-Projects/JitFFI">
-        <span class="15" style="color:rgb(0,0,255);font-size:20.0000pt;">JitFFI</span></a>
-      <br>
-      <span style="font-family:Calibri;">
-        JIT compiler for Foreign-Function Interface
-      </span>
-      <br>
-      <span style="font-family:Consolas;">
-        <br>int function(int a, float b);
-        <br>ArgTypeList typelist = { &amp;atu_int, &amp;atu_float };
-        <br>
-        <br>int i = 1, f = 2.0;
-        <br>ArgDataList dl = { &amp;i, &amp;f };
-        <br>ArgDataListPartial dlp1 = { &amp;i, nullptr };
-        <br>ArgDataListPartial dlp2 = { nullptr, &amp;f };
-        <br>
-        <br>auto f1 = Compile(&amp;function, typelist);
-        <br>auto f2 = Compile(&amp;function, typelist, dl);
-        <br>auto f3 = Compile(&amp;function, typelist, dlp1);
-        <br>
-        <br>int r;
-        <br>
-        <br>f1(&amp;r, dl);
-        <br>f2(&amp;r);
-        <br>f3(&amp;r, dlp2);
-        <br>
-      </span>
-    </p>
-  </div>
+---
+layout: default
+class: home
+css: ['pages/index.css']
+comments: false
+---
 
-</html>
+<section class="banner">
+    <div class="collection-head">
+        <div class="container">
+            <div class="collection-title">
+              <h1 class="collection-header" id="sub-title"><span>{{ site.subtitle }}</span></h1>
+                <div class="collection-info">
+                    <span class="meta-info mobile-hidden">
+                        <span class="octicon octicon-location"></span>
+                        {{ site.location }}
+                    </span>
+                    <span class="meta-info">
+                        <span class="octicon octicon-organization"></span>
+                        <a href="{{ site.organization_url }}" target="_blank">{{ site.organization }}</a>
+                    </span>
+                     <span class="meta-info">
+                        <span class="octicon octicon-mark-github"></span>
+                        <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.banner -->
+<section class="container content">
+    <div class="columns">
+        <div class="column two-thirds" >
+            <ol class="repo-list">
+                {% for post in paginator.posts %}
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="meta-info">
+                          <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                        </span>
+                        {% for cat in post.categories %}
+                        <span class="meta-info">
+                          <span class="octicon octicon-file-directory"></span>
+                          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+                        </span>
+                        {% endfor %}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="column one-third">
+            {% include sidebar-search.html %}
+            {% include sidebar-popular-repo.html %}
+        </div>
+    </div>
+    <div class="pagination text-align">
+      <div class="btn-group">
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+              <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
+          {% else %}
+              <a href="{{ site.url }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
+          {% endif %}
+        {% else %}
+            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
+        {% endif %}
+        {% if paginator.page == 1 %}
+            <a href="javascript:;" class="active btn btn-outline">1</a>
+        {% else %}
+            <a href="{{ site.url }}/"  class="btn btn-outline">1</a>
+        {% endif %}
+        {% for count in (2..paginator.total_pages) %}
+          {% if count == paginator.page %}
+              <a href="javascript:;"  class="active btn btn-outline">{{count}}</a>
+          {% else %}
+              <a href="{{ site.url }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
+          {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+            <a href="{{ site.url }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
+        {% else %}
+            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
+        {% endif %}
+        </div>
+    </div>
+    <!-- /pagination -->
+</section>
+<!-- /section.content -->

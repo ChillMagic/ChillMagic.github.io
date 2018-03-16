@@ -1,0 +1,121 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: http://chillmagic.github.io
+date_format: "ordinal"
+title: Chill Magic's Blog
+subtitle: "Magic Everywhere"
+description: "Magic Everywhere"
+keywords: Chill Magic
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Chill Magic
+#organization: zkh360.com
+#organization_url: http://www.zkh360.com
+github_username: ChillMagic
+#location: Wuhan, China
+email: chillmagic@outlook.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
+
+  -
+    href: /categories/
+    label: 分类
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: ChillMagic/chillmagic.github.io
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: ChillMagic
+    repo: blogcomment
+    oauth:
+        client_id: 2d777f8a660c96a1834b
+        client_secret: 0ee088ffa944769f12559301bf08142fe6d0f888
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: ChillMagic
+    repo: blogcomment
+    clientID: 2d777f8a660c96a1834b
+    clientSecret: 0ee088ffa944769f12559301bf08142fe6d0f888
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: true
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
