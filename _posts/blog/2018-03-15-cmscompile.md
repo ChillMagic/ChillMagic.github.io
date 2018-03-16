@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【CVM】 CMS 的编译（寄存器篇）
-categories: [CMS, CVM]
+categories: [cms, cvm]
 description: 
 keywords: CMS, 编译
 ---

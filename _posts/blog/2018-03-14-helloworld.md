@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World!
-categories: [Chill, CMS]
+categories: [chill, cms]
 description: The first blog
 keywords: Chill
 ---
