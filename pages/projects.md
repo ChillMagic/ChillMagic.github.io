@@ -10,9 +10,7 @@ permalink: /projects/
 
 ## CVM Projects
 
-![](/images/icon-cvm.png)
-
-[Link](https://github.com/CVM-Projects)
+[![](/images/icon-cvm.png)](https://github.com/CVM-Projects)
 
 [CVM](https://github.com/CVM-Projects/CVM)
 
@@ -36,9 +34,7 @@ permalink: /projects/
 
 ## The Chill Programming Language
 
-![](/images/icon-chill.png)
-
-[Link](https://github.com/Chill-Language)
+[![](/images/icon-chill.png)](https://github.com/Chill-Language)
 
 [ICM](https://github.com/Chill-Language/ICM)
 
